@@ -1,6 +1,6 @@
 import React from 'react';
 
-const url = window.location.hostname + ':3003/';
+//const url = window.location.hostname + ':3003/';
 
 class App extends React.Component {
   state = {
@@ -8,7 +8,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    fetch(`http://${url}`)
+    fetch(`https://a01vercel-uuo6.vercel.app:3003`)
       .then((res) => res.json())
       .then((data) => this.setState({ name: data.name }));
   }
@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <>
         <h1>Hello {this.state.name}!</h1>
-        <h4>{url}</h4>
+
         <h4>{window.location.href}</h4>
       </>
     );
