@@ -1,5 +1,12 @@
 {
-    "routes": [
+    "version": 2,
+    "builds": [
+        {
+            "scr": "./index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "rules": [
         {
             "src": "/(.*)",
             "dest": "/"
