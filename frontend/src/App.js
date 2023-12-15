@@ -8,7 +8,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    fetch(`https://a01vercel-uuo6.vercel.app:3003`)
+    fetch(`https://a01vercel-client.vercel.app:3003`)
       .then((res) => res.json())
       .then((data) => this.setState({ name: data.name }));
   }
