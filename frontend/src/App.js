@@ -34,8 +34,8 @@ const App = () => {
           {name ? <h1>Hello {name}!</h1> : <p>No data available</p>}
           <h4>{window.location.href}</h4>
 
-          <h4>VERCEL_URL_2</h4>
-          <h4>`${process.env.VERCEL_URL}`</h4>
+          <h4>VERCEL_URL_3</h4>
+          <h4>{process.env.NEXT_PUBLIC_VERCEL_URL}</h4>
         </>
       )}
     </>
