@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Coomit last update #1</h1>
+      <h1>Coomit last update #2</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (

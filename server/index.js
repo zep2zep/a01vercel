@@ -1,6 +1,7 @@
 const express = require('express');
-const app = express();
 const cors = require("cors")
+const app = express();
+
 const port = 3003;
 
 const corsOptions = {
@@ -10,7 +11,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.get("/", function(req, res) {
-    res.send({"name": "Jane Doe dal backend"}) // Should be json format
+    res.send({"name": "Jane Doe dal backend #2"}) // Should be json format
   })
   app.listen(port, () => {
     console.log(`Server running on port ${port}`);
