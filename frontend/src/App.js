@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3003');
+        const response = await axios.get(`${process.env.VERCEL_URL}`);
         if (response.status === 200) {
           setName(response.data.name);
         } else {
@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Coomit 4!</h1>
+      <h1>Coomit 5!</h1>
       {loading ? (
         <p>Loading...</p>
       ) : (
