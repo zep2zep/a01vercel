@@ -8,9 +8,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          'https://a01vercel-client.vercel.app/'
-        );
+        const response = await axios.get('http://localhost:3003');
         if (response.status === 200) {
           setName(response.data.name);
         } else {
