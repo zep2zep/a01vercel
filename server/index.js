@@ -4,7 +4,7 @@ const cors = require("cors")
 const port = 3003;
 
 const corsOptions = {
-  origin: 'https://a01vercel-server.vercel.app/', // Sostituisci con l'URL del tuo frontend
+  origin: 'https://a01vercel-client.vercel.app/', // Sostituisci con l'URL del tuo frontend
   optionsSuccessStatus: 200 // Alcune versioni di CORS richiedono questo parametro
 };
 
