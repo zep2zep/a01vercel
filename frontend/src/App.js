@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
 const App = () => {
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(true); // Aggiunto uno stato per gestire il caricamento
