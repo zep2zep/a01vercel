@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const App = () => {
   const [name, setName] = useState('');
+  const [loading, setLoading] = useState(true); // Aggiunto uno stato per gestire il caricamento
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,17 +18,25 @@ const App = () => {
         }
       } catch (error) {
         console.error('Errore durante la richiesta al server:', error);
+      } finally {
+        setLoading(false); // Imposta lo stato di caricamento su false quando la richiesta è completata
       }
     };
 
-    fetchData(); // Effettua la richiesta al backend quando il componente viene montato
-  }, []); // Assicura che useEffect venga eseguito solo una volta al caricamento del componente
+    fetchData();
+  }, []);
 
   return (
     <>
-      <h1>Coomit!</h1>
-      {name ? <h1>Hello {name}!</h1> : <p>Loading...</p>}
-      <h4>{window.location.href}</h4>
+      <h1>Coomit 3!</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          {name ? <h1>Hello {name}!</h1> : <p>No data available</p>}
+          <h4>{window.location.href}</h4>
+        </>
+      )}
     </>
   );
 };
