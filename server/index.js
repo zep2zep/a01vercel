@@ -8,7 +8,7 @@ const port = 3003;
 app.use(cors());
 
 app.get("/", function(req, res) {
-    res.send({"name": "Jane Doe dal backend #2"}) // Should be json format
+    res.send({"name": "Jane Doe da Colico"}) // Should be json format
   })
  
   app.listen(port, () => {
