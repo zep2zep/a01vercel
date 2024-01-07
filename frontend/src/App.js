@@ -9,7 +9,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'https://node-react-sever.vercel.app/'
+          'https://a01vercel-api.vercel.app'
         );
         if (response.status === 200) {
           setName(response.data.name);
